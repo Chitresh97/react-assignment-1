@@ -7,17 +7,18 @@ class App extends Component {
     username:"Chitresh"
   }
 
-  setnameHandler=()=>{
+  setnameHandler=(event)=>{
     this.setState({
-      username:"cookie-monster"
+      username:event.target.value,
+
     })
   }
   render() {
     return (
       <div className="App">
         <UserOutput name={this.state.username}/>
-        <UserInput/>
-        <UserOutput/>
+        <UserInput setname={this.setnameHandler} name={this.state.username}/>
+        <UserOutput name={this.state.username}/>
 
       </div>
     );
