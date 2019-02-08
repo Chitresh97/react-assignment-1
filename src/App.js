@@ -6,6 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <UserOutput name="Chitresh"/>
         <UserInput/>
         <UserOutput/>
 
